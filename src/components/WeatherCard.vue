@@ -1,19 +1,32 @@
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
+    <h1 class="green">{{ location }}</h1>
     <h3>
       Weather data coming soon!
     </h3>
   </div>
 </template>
 
-<script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
+<script>
+  import { useStore } from "../stores/weather";
+  export default {
+    name: 'WeatherCard', 
+    props: {
+      location: {
+        type: String,
+        required: true
+      }, 
+    }, 
+    setup() {
+      const store = useStore()
+      return {
+        store
+      }
+    },
+    mounted() {
+      this.store.getCurrentWeather(this.location)
+    }
   }
-})
 </script>
 
 <style scoped>
