@@ -3,11 +3,6 @@
   <header>
     <div class="container" >
       <WeatherCard class="item" location="New York" />
-      <WeatherCard class="item" location="Reykjavik" />
-      <WeatherCard class="item" location="Berlin" />
-      <WeatherCard class="item" location="New York" />
-      <WeatherCard class="item" location="Reykjavik" />
-      <WeatherCard class="item" location="Berlin" />
     </div>
   </header>
 
